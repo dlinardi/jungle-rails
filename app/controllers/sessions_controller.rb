@@ -12,11 +12,6 @@ class SessionsController < ApplicationController
     end
   end
 
-  def validate_email(email)
-    email = email.strip
-    email.downcase!
-  end
-
   def destroy
     session[:user_id] = nil
     redirect_to '/login'
